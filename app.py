@@ -17,12 +17,6 @@ mobil = [
             'harga' : 260000,
             'plat' : ['B 333 CCC']
 
-        },
-        {
-            'nama' : "Testing RentCar",
-            'harga' : 200000,
-            'plat' : ['B 999 HVP', 'B', 'W']
-
         }],
         'ukuran' : 4,
         'transmisi' : 'Automatic' 
