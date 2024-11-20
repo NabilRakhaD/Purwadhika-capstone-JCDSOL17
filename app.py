@@ -5,7 +5,7 @@ mobil = [
         'penyedia' : [{
             'nama' : "Nabil RentCar",
             'harga' : 250000,
-            'plat' : ['B 123 ABC']
+            'plat' : ['B 123 ABC', 'B 630 UTK']
         },
         {
             'nama' : "Rakha RentCar",
@@ -58,7 +58,18 @@ mobilSedangDirental = [
         },
         'ukuran' : 6,
         'transmisi' : 'Automatic'
+    },
+    {
+        'nama': 'Pajero',
+        'penyedia' : {
+            'nama' : "Test RentCar",
+            'harga' : 500000,
+            'plat' : 'Y 824 JJK'
+        },
+        'ukuran' : 6,
+        'transmisi' : 'Automatic'
     }
+        
 ]
 
 def read_validated_input(dtype, message):
@@ -195,7 +206,6 @@ def menambahMobil():
         
     if nama_mobil in mobilYgSudahAda:
         # If the car already exists
-        # Loop until a valid plat is provided
         for car in mobil:
             if car['nama'] == nama_mobil:
                 # Check if the provider already exists
@@ -335,6 +345,7 @@ def merentalMobil() :
                 print("Masukkan Angka Sesuai Index")
         if rent_mobil :
             mobil[pilihMobil]['penyedia'][pilihPenyedia]['plat'].pop(rand)
+            
             if len( mobil[pilihMobil]['penyedia'][pilihPenyedia]['plat']) == 0 :
                 mobil[pilihMobil]['penyedia'].pop(pilihPenyedia)
             
